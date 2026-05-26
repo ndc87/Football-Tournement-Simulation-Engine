@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.football</groupId>
+    <artifactId>football-tournament-engine</artifactId>
+    <version>1.0.0</version>
+    <packaging>jar</packaging>
+
+    <name>Football Tournament Simulation Engine</name>
+    <description>A Java-based engine to simulate professional football tournaments with Round-Robin scheduling, statistical match simulation, and real-time standings.</description>
+
+    <properties>
+        <maven.compiler.source>23</maven.compiler.source>
+        <maven.compiler.target>23</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <jackson.version>2.17.0</jackson.version>
+    </properties>
+
+    <dependencies>
+        <!-- Jackson for JSON parsing (DataSeeder) -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+
+        <!-- JUnit 5 for testing -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>5.10.2</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <!-- Compiler plugin -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.12.1</version>
+                <configuration>
+                    <source>23</source>
+                    <target>23</target>
+                </configuration>
+            </plugin>
+
+            <!-- Exec plugin to run Main class -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.1.1</version>
+                <configuration>
+                    <mainClass>com.football.Main</mainClass>
+                </configuration>
+            </plugin>
+
+            <!-- Surefire for JUnit 5 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.2.5</version>
+            </plugin>
+
+            <!-- Shade plugin to create fat JAR -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>3.5.2</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                        <configuration>
+                            <transformers>
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                    <mainClass>com.football.Main</mainClass>
+                                </transformer>
+                            </transformers>
+                            <createDependencyReducedPom>false</createDependencyReducedPom>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+            </resource>
+        </resources>
+    </build>
+</project>

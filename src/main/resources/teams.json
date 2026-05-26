@@ -1,0 +1,286 @@
+{
+  "tournament": "Premier League 2024/25",
+  "season": "2024/25",
+  "teams": [
+    {
+      "name": "Manchester City",
+      "shortName": "MCI",
+      "attackRating": 92,
+      "defenseRating": 85,
+      "midfieldRating": 91,
+      "players": [
+        { "name": "Ederson",        "position": "GOALKEEPER", "stamina": 100, "form": 0.88 },
+        { "name": "Kyle Walker",    "position": "DEFENDER",   "stamina": 100, "form": 0.82 },
+        { "name": "Rodri",          "position": "MIDFIELDER", "stamina": 100, "form": 0.95 },
+        { "name": "Kevin De Bruyne","position": "MIDFIELDER", "stamina": 100, "form": 0.93 },
+        { "name": "Erling Haaland", "position": "FORWARD",   "stamina": 100, "form": 0.97 }
+      ]
+    },
+    {
+      "name": "Arsenal",
+      "shortName": "ARS",
+      "attackRating": 86,
+      "defenseRating": 83,
+      "midfieldRating": 87,
+      "players": [
+        { "name": "David Raya",     "position": "GOALKEEPER", "stamina": 100, "form": 0.87 },
+        { "name": "Ben White",      "position": "DEFENDER",   "stamina": 100, "form": 0.83 },
+        { "name": "Martin Odegaard","position": "MIDFIELDER", "stamina": 100, "form": 0.90 },
+        { "name": "Bukayo Saka",    "position": "FORWARD",   "stamina": 100, "form": 0.92 },
+        { "name": "Gabriel Jesus",  "position": "FORWARD",   "stamina": 100, "form": 0.84 }
+      ]
+    },
+    {
+      "name": "Liverpool",
+      "shortName": "LIV",
+      "attackRating": 88,
+      "defenseRating": 82,
+      "midfieldRating": 86,
+      "players": [
+        { "name": "Alisson Becker", "position": "GOALKEEPER", "stamina": 100, "form": 0.90 },
+        { "name": "Virgil van Dijk","position": "DEFENDER",   "stamina": 100, "form": 0.89 },
+        { "name": "Alexis Mac Allister","position": "MIDFIELDER","stamina": 100, "form": 0.86 },
+        { "name": "Mohamed Salah",  "position": "FORWARD",   "stamina": 100, "form": 0.95 },
+        { "name": "Darwin Nunez",   "position": "FORWARD",   "stamina": 100, "form": 0.82 }
+      ]
+    },
+    {
+      "name": "Chelsea",
+      "shortName": "CHE",
+      "attackRating": 80,
+      "defenseRating": 78,
+      "midfieldRating": 79,
+      "players": [
+        { "name": "Robert Sanchez", "position": "GOALKEEPER", "stamina": 100, "form": 0.80 },
+        { "name": "Reece James",    "position": "DEFENDER",   "stamina": 100, "form": 0.84 },
+        { "name": "Enzo Fernandez", "position": "MIDFIELDER", "stamina": 100, "form": 0.82 },
+        { "name": "Cole Palmer",    "position": "FORWARD",   "stamina": 100, "form": 0.91 },
+        { "name": "Nicolas Jackson","position": "FORWARD",   "stamina": 100, "form": 0.80 }
+      ]
+    },
+    {
+      "name": "Tottenham Hotspur",
+      "shortName": "TOT",
+      "attackRating": 79,
+      "defenseRating": 75,
+      "midfieldRating": 77,
+      "players": [
+        { "name": "Guglielmo Vicario","position": "GOALKEEPER","stamina": 100, "form": 0.82 },
+        { "name": "Pedro Porro",     "position": "DEFENDER",  "stamina": 100, "form": 0.80 },
+        { "name": "James Maddison",  "position": "MIDFIELDER","stamina": 100, "form": 0.85 },
+        { "name": "Son Heung-min",   "position": "FORWARD",  "stamina": 100, "form": 0.88 },
+        { "name": "Richarlison",     "position": "FORWARD",  "stamina": 100, "form": 0.79 }
+      ]
+    },
+    {
+      "name": "Manchester United",
+      "shortName": "MUN",
+      "attackRating": 78,
+      "defenseRating": 76,
+      "midfieldRating": 76,
+      "players": [
+        { "name": "Andre Onana",    "position": "GOALKEEPER", "stamina": 100, "form": 0.79 },
+        { "name": "Lisandro Martinez","position": "DEFENDER", "stamina": 100, "form": 0.83 },
+        { "name": "Bruno Fernandes","position": "MIDFIELDER", "stamina": 100, "form": 0.87 },
+        { "name": "Rasmus Hojlund","position": "FORWARD",    "stamina": 100, "form": 0.78 },
+        { "name": "Marcus Rashford","position": "FORWARD",   "stamina": 100, "form": 0.80 }
+      ]
+    },
+    {
+      "name": "Newcastle United",
+      "shortName": "NEW",
+      "attackRating": 78,
+      "defenseRating": 79,
+      "midfieldRating": 76,
+      "players": [
+        { "name": "Nick Pope",      "position": "GOALKEEPER", "stamina": 100, "form": 0.85 },
+        { "name": "Kieran Trippier","position": "DEFENDER",   "stamina": 100, "form": 0.83 },
+        { "name": "Bruno Guimaraes","position": "MIDFIELDER", "stamina": 100, "form": 0.89 },
+        { "name": "Alexander Isak", "position": "FORWARD",   "stamina": 100, "form": 0.88 },
+        { "name": "Anthony Gordon", "position": "FORWARD",   "stamina": 100, "form": 0.82 }
+      ]
+    },
+    {
+      "name": "Aston Villa",
+      "shortName": "AVL",
+      "attackRating": 81,
+      "defenseRating": 77,
+      "midfieldRating": 78,
+      "players": [
+        { "name": "Emiliano Martinez","position": "GOALKEEPER","stamina": 100, "form": 0.88 },
+        { "name": "Ezri Konsa",      "position": "DEFENDER",  "stamina": 100, "form": 0.81 },
+        { "name": "Douglas Luiz",    "position": "MIDFIELDER","stamina": 100, "form": 0.85 },
+        { "name": "Ollie Watkins",   "position": "FORWARD",  "stamina": 100, "form": 0.90 },
+        { "name": "Leon Bailey",     "position": "FORWARD",  "stamina": 100, "form": 0.82 }
+      ]
+    },
+    {
+      "name": "West Ham United",
+      "shortName": "WHU",
+      "attackRating": 74,
+      "defenseRating": 72,
+      "midfieldRating": 73,
+      "players": [
+        { "name": "Lukasz Fabianski","position": "GOALKEEPER","stamina": 100, "form": 0.75 },
+        { "name": "Aaron Cresswell","position": "DEFENDER",  "stamina": 100, "form": 0.74 },
+        { "name": "Tomas Soucek",   "position": "MIDFIELDER","stamina": 100, "form": 0.79 },
+        { "name": "Jarrod Bowen",   "position": "FORWARD",  "stamina": 100, "form": 0.85 },
+        { "name": "Michail Antonio","position": "FORWARD",  "stamina": 100, "form": 0.76 }
+      ]
+    },
+    {
+      "name": "Brighton & Hove Albion",
+      "shortName": "BHA",
+      "attackRating": 76,
+      "defenseRating": 74,
+      "midfieldRating": 80,
+      "players": [
+        { "name": "Jason Steele",   "position": "GOALKEEPER", "stamina": 100, "form": 0.81 },
+        { "name": "Joel Veltman",   "position": "DEFENDER",   "stamina": 100, "form": 0.79 },
+        { "name": "Pascal Gross",   "position": "MIDFIELDER", "stamina": 100, "form": 0.82 },
+        { "name": "Evan Ferguson",  "position": "FORWARD",   "stamina": 100, "form": 0.83 },
+        { "name": "Simon Adingra",  "position": "FORWARD",   "stamina": 100, "form": 0.80 }
+      ]
+    },
+    {
+      "name": "Wolverhampton Wanderers",
+      "shortName": "WOL",
+      "attackRating": 70,
+      "defenseRating": 70,
+      "midfieldRating": 69,
+      "players": [
+        { "name": "Jose Sa",        "position": "GOALKEEPER", "stamina": 100, "form": 0.78 },
+        { "name": "Rayan Ait-Nouri","position": "DEFENDER",   "stamina": 100, "form": 0.77 },
+        { "name": "Joao Gomes",     "position": "MIDFIELDER", "stamina": 100, "form": 0.80 },
+        { "name": "Hwang Hee-chan", "position": "FORWARD",   "stamina": 100, "form": 0.79 },
+        { "name": "Matheus Cunha",  "position": "FORWARD",   "stamina": 100, "form": 0.82 }
+      ]
+    },
+    {
+      "name": "Fulham",
+      "shortName": "FUL",
+      "attackRating": 72,
+      "defenseRating": 71,
+      "midfieldRating": 72,
+      "players": [
+        { "name": "Bernd Leno",     "position": "GOALKEEPER", "stamina": 100, "form": 0.82 },
+        { "name": "Kenny Tete",     "position": "DEFENDER",   "stamina": 100, "form": 0.76 },
+        { "name": "Harrison Reed",  "position": "MIDFIELDER", "stamina": 100, "form": 0.78 },
+        { "name": "Willian",        "position": "FORWARD",   "stamina": 100, "form": 0.79 },
+        { "name": "Aleksandar Mitrovic","position": "FORWARD","stamina": 100, "form": 0.84 }
+      ]
+    },
+    {
+      "name": "Brentford",
+      "shortName": "BRE",
+      "attackRating": 73,
+      "defenseRating": 70,
+      "midfieldRating": 71,
+      "players": [
+        { "name": "Mark Flekken",   "position": "GOALKEEPER", "stamina": 100, "form": 0.81 },
+        { "name": "Ben Mee",        "position": "DEFENDER",   "stamina": 100, "form": 0.78 },
+        { "name": "Christian Norgaard","position": "MIDFIELDER","stamina": 100, "form": 0.80 },
+        { "name": "Bryan Mbeumo",   "position": "FORWARD",   "stamina": 100, "form": 0.86 },
+        { "name": "Yoane Wissa",    "position": "FORWARD",   "stamina": 100, "form": 0.82 }
+      ]
+    },
+    {
+      "name": "Crystal Palace",
+      "shortName": "CRY",
+      "attackRating": 71,
+      "defenseRating": 72,
+      "midfieldRating": 70,
+      "players": [
+        { "name": "Sam Johnstone",  "position": "GOALKEEPER", "stamina": 100, "form": 0.79 },
+        { "name": "Marc Guehi",     "position": "DEFENDER",   "stamina": 100, "form": 0.82 },
+        { "name": "Eberechi Eze",   "position": "MIDFIELDER", "stamina": 100, "form": 0.87 },
+        { "name": "Michael Olise",  "position": "FORWARD",   "stamina": 100, "form": 0.88 },
+        { "name": "Jean-Philippe Mateta","position": "FORWARD","stamina": 100, "form": 0.82 }
+      ]
+    },
+    {
+      "name": "Everton",
+      "shortName": "EVE",
+      "attackRating": 68,
+      "defenseRating": 70,
+      "midfieldRating": 67,
+      "players": [
+        { "name": "Jordan Pickford","position": "GOALKEEPER", "stamina": 100, "form": 0.83 },
+        { "name": "Seamus Coleman","position": "DEFENDER",   "stamina": 100, "form": 0.72 },
+        { "name": "Abdoulaye Doucoure","position": "MIDFIELDER","stamina": 100, "form": 0.76 },
+        { "name": "Dominic Calvert-Lewin","position": "FORWARD","stamina": 100, "form": 0.78 },
+        { "name": "Demarai Gray",   "position": "FORWARD",   "stamina": 100, "form": 0.74 }
+      ]
+    },
+    {
+      "name": "Nottingham Forest",
+      "shortName": "NFO",
+      "attackRating": 69,
+      "defenseRating": 73,
+      "midfieldRating": 69,
+      "players": [
+        { "name": "Matz Sels",      "position": "GOALKEEPER", "stamina": 100, "form": 0.81 },
+        { "name": "Neco Williams",  "position": "DEFENDER",   "stamina": 100, "form": 0.78 },
+        { "name": "Ryan Yates",     "position": "MIDFIELDER", "stamina": 100, "form": 0.77 },
+        { "name": "Morgan Gibbs-White","position": "FORWARD", "stamina": 100, "form": 0.84 },
+        { "name": "Taiwo Awoniyi",  "position": "FORWARD",   "stamina": 100, "form": 0.78 }
+      ]
+    },
+    {
+      "name": "Bournemouth",
+      "shortName": "BOU",
+      "attackRating": 70,
+      "defenseRating": 68,
+      "midfieldRating": 70,
+      "players": [
+        { "name": "Neto",           "position": "GOALKEEPER", "stamina": 100, "form": 0.79 },
+        { "name": "Adam Smith",     "position": "DEFENDER",   "stamina": 100, "form": 0.74 },
+        { "name": "Philip Billing", "position": "MIDFIELDER", "stamina": 100, "form": 0.78 },
+        { "name": "Dominic Solanke","position": "FORWARD",   "stamina": 100, "form": 0.83 },
+        { "name": "Dango Ouattara", "position": "FORWARD",   "stamina": 100, "form": 0.80 }
+      ]
+    },
+    {
+      "name": "Burnley",
+      "shortName": "BUR",
+      "attackRating": 62,
+      "defenseRating": 60,
+      "midfieldRating": 61,
+      "players": [
+        { "name": "James Trafford", "position": "GOALKEEPER", "stamina": 100, "form": 0.74 },
+        { "name": "Connor Roberts", "position": "DEFENDER",   "stamina": 100, "form": 0.70 },
+        { "name": "Josh Brownhill",  "position": "MIDFIELDER","stamina": 100, "form": 0.73 },
+        { "name": "Lyle Foster",    "position": "FORWARD",   "stamina": 100, "form": 0.72 },
+        { "name": "Zeki Amdouni",   "position": "FORWARD",   "stamina": 100, "form": 0.71 }
+      ]
+    },
+    {
+      "name": "Sheffield United",
+      "shortName": "SHU",
+      "attackRating": 60,
+      "defenseRating": 58,
+      "midfieldRating": 60,
+      "players": [
+        { "name": "Wes Foderingham","position": "GOALKEEPER", "stamina": 100, "form": 0.72 },
+        { "name": "George Baldock", "position": "DEFENDER",   "stamina": 100, "form": 0.68 },
+        { "name": "Oliver Norwood", "position": "MIDFIELDER", "stamina": 100, "form": 0.71 },
+        { "name": "Oli McBurnie",   "position": "FORWARD",   "stamina": 100, "form": 0.70 },
+        { "name": "Gustavo Hamer",  "position": "FORWARD",   "stamina": 100, "form": 0.73 }
+      ]
+    },
+    {
+      "name": "Luton Town",
+      "shortName": "LUT",
+      "attackRating": 61,
+      "defenseRating": 59,
+      "midfieldRating": 61,
+      "players": [
+        { "name": "Thomas Kaminski","position": "GOALKEEPER", "stamina": 100, "form": 0.73 },
+        { "name": "Amari'i Bell",   "position": "DEFENDER",   "stamina": 100, "form": 0.69 },
+        { "name": "Ross Barkley",   "position": "MIDFIELDER", "stamina": 100, "form": 0.75 },
+        { "name": "Carlton Morris", "position": "FORWARD",   "stamina": 100, "form": 0.74 },
+        { "name": "Elijah Adebayo", "position": "FORWARD",   "stamina": 100, "form": 0.71 }
+      ]
+    }
+  ]
+}

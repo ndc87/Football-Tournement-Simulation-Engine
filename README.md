@@ -1,28 +1,199 @@
 # ⚽ Football Tournament Simulation Engine
 
-## 📖 Giới thiệu (About the Project)
-**Football Tournament Simulation Engine** là một dự án xây dựng lõi hệ thống (engine) bằng ngôn ngữ **Java**. Dự án có khả năng tạo giải đấu, tự động xếp lịch thi đấu, mô phỏng diễn biến trận đấu dựa trên chiến thuật, và tự động cập nhật bảng xếp hạng theo thời gian thực [1]. 
+> **Hệ thống mô phỏng giải đấu bóng đá chuyên nghiệp** được xây dựng bằng Java, áp dụng các Design Patterns chuẩn mực và thuật toán xếp lịch Round-Robin.
 
-Dự án này là minh chứng rõ nét cho việc áp dụng Lập trình hướng đối tượng (OOP), các Cấu trúc dữ liệu & Thuật toán, và đặc biệt là các **Design Patterns** chuẩn mực [1, 2].
+---
+
+## 📖 Giới thiệu (About the Project)
+
+**Football Tournament Simulation Engine** là một engine lõi (core engine) viết bằng **Java 23**, có khả năng:
+- Tự động tạo lịch thi đấu Premier League (380 trận, 38 vòng) với thuật toán Round-Robin
+- Mô phỏng diễn biến trận đấu theo mô hình Time-step (9 nhịp × 10 phút)
+- Tự động cập nhật bảng xếp hạng real-time qua Observer Pattern
+- Thay đổi chiến thuật linh hoạt ở phút 70 qua Strategy Pattern
+
+Dự án là minh chứng thực tế cho việc áp dụng **OOP**, **Design Patterns**, và **Thuật toán** trong lập trình Java.
+
+---
 
 ## ✨ Tính năng cốt lõi (Core Features)
-*   **📅 Generate Fixtures (Tạo lịch thi đấu):** Triển khai thuật toán **Round-Robin** (Đá vòng tròn tính điểm). Mỗi đội sẽ gặp nhau 2 lượt (sân nhà/sân khách) mà không bị trùng lịch thi đấu [3].
-*   **⚙️ Match Simulation Engine (Mô phỏng trận đấu):** Trận đấu được chia thành các "nhịp" thời gian (ví dụ: mỗi 10 phút/lần). Tỷ lệ ghi bàn được tính toán chi tiết dựa trên chỉ số Tấn công (Attack) của đội A so với Phòng ngự (Defense) của đội B, kết hợp cùng hệ số phong độ ngẫu nhiên [3].
-*   **🧠 Tactical Shifts (Thay đổi chiến thuật):** Ứng dụng **Strategy Pattern**. Hệ thống sẽ tự động thay đổi chiến thuật linh hoạt (ví dụ: chuyển từ `BalancedTactic` sang `AllOutAttackTactic` khi bị dẫn bàn ở cuối trận) [2].
-*   **📊 Live Standings (Bảng xếp hạng Real-time):** Ứng dụng **Observer Pattern**. Bảng xếp hạng (Observer) sẽ "lắng nghe" sự kiện từ các trận đấu (Subject) để ngay lập tức cập nhật Điểm số và Hiệu số bàn thắng bại khi trận đấu diễn ra hoặc kết thúc [2].
 
-## 🧱 Cấu trúc Thực thể (Core Entities)
-*   **`Team`**: Quản lý danh sách cầu thủ, chỉ số sức mạnh (Attack, Defense, Midfield) và chiến thuật hiện tại [1].
-*   **`Player`**: Chứa thông tin tên, vị trí thi đấu, thể lực và phong độ [1].
-*   **`Match`**: Quản lý trận đấu giữa Đội nhà và Đội khách, cập nhật tỷ số, thời gian và các sự kiện (bàn thắng, thẻ phạt) [3].
-*   **`Tournament`**: Quản lý danh sách các đội tham gia, lịch thi đấu toàn giải và Bảng xếp hạng [3].
+| Tính năng | Mô tả | Design Pattern |
+|-----------|-------|----------------|
+| 📅 **Generate Fixtures** | Tạo 380 trận đấu không xung đột cho 20 đội | Round-Robin (Circle Method) O(N²) |
+| ⚙️ **Match Simulation** | Mô phỏng 90 phút với xác suất ghi bàn theo công thức thống kê | Time-step Simulation |
+| 🧠 **Tactical Shifts** | Tự động chuyển sang `AllOutAttackTactic` ở phút 70 khi đang thua | **Strategy Pattern** |
+| 📊 **Live Standings** | Bảng xếp hạng cập nhật ngay khi kết thúc mỗi trận | **Observer Pattern** |
+| 🏆 **Tie-breaking** | Phân hạng theo: Điểm → Hiệu số → Bàn thắng → Tên đội | Custom Comparator |
 
-## 🗺️ Lộ trình Phát triển (Roadmap)
-Dự án được lên kế hoạch phát triển trong 4 tuần:
-*   **Tuần 1: Khởi tạo Model & Data:** Xây dựng các class cơ bản và sử dụng `DataSeeder` để nạp dữ liệu cho 20 đội bóng thực tế [4].
-*   **Tuần 2: Thuật toán Xếp lịch:** Triển khai thuật toán *Round-Robin* để tự động sinh ra 38 vòng đấu cho 20 đội [4, 5].
-*   **Tuần 3: Simulation Engine & Design Patterns:** Viết vòng lặp trận đấu (1-90 phút) và áp dụng *Strategy Pattern* cùng *Observer Pattern* để mô phỏng trận đấu và cập nhật Bảng xếp hạng vòng 1 [5].
-*   **Tuần 4: Tích hợp Hệ thống:** Đưa logic cốt lõi vào framework (Spring Boot API hoặc giao diện Desktop) và tối ưu hóa các trường hợp kiểm thử (bằng điểm, bằng hiệu số) [6, 7].
+---
 
-## 🚀 Hướng dẫn Cài đặt (Getting Started)
-*(Sẽ cập nhật chi tiết cách clone repo, chạy ứng dụng bằng dòng lệnh hoặc framework ở các giai đoạn sau)*
+## 🧱 Kiến trúc Hệ thống
+
+```
+Main (CLI)
+  │
+  ├── DataSeeder ──── teams.json (20 Premier League teams)
+  │
+  ├── FixtureGenerator ──── Round-Robin Algorithm
+  │         └── 380 Match objects
+  │
+  ├── MatchSimulationEngine
+  │         ├── Strategy Pattern: Tactic (Balanced / AllOutAttack)
+  │         └── Time-step: 9 ticks × 10 min
+  │
+  └── Tournament
+            ├── Team[] ──── Player[]
+            ├── Match[][] ──── MatchEvent[]
+            └── LeagueTable (Observer) ──── TeamStats[]
+```
+
+---
+
+## 🚀 Hướng dẫn Cài đặt & Chạy
+
+### Yêu cầu
+- **JDK 23** (đã cài tại `C:\Program Files\Java\jdk-23`)
+- **Apache Maven 3.9+** (hoặc dùng Maven tại `d:\codeNDC\apache-maven-3.9.6\`)
+
+### Bước 1: Clone / mở project
+```bash
+cd d:\codeNDC\Football-Tournement-Simulation-Engine
+```
+
+### Bước 2: Compile
+```bash
+# Dùng Maven đã download sẵn
+set JAVA_HOME=C:\Program Files\Java\jdk-23
+d:\codeNDC\apache-maven-3.9.6\bin\mvn.cmd clean compile
+```
+
+### Bước 3: Chạy chương trình
+```bash
+d:\codeNDC\apache-maven-3.9.6\bin\mvn.cmd exec:java
+```
+
+### Bước 4: Build JAR (tùy chọn)
+```bash
+d:\codeNDC\apache-maven-3.9.6\bin\mvn.cmd package
+java -jar target\football-tournament-engine-1.0.0.jar
+```
+
+---
+
+## 🎮 Cách sử dụng (Usage)
+
+Khi chạy, hệ thống hiển thị menu tương tác:
+
+```
+╔══════════════════════════════════════════════════════════════════════════════╗
+║        ⚽  FOOTBALL TOURNAMENT SIMULATION ENGINE  ⚽                        ║
+║                     Premier League Edition                                  ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+  [1] Chạy vòng đấu tiếp theo         ← Xem chi tiết từng phút
+  [2] Chạy 5 vòng đấu tiếp theo       ← Chế độ tăng tốc
+  [3] Chạy toàn bộ giải đấu           ← Kết quả cuối mùa
+  [4] Xem bảng xếp hạng hiện tại
+  [5] Xem kết quả một vòng đấu cụ thể
+  [0] Thoát
+```
+
+---
+
+## 📊 Ví dụ Output
+
+### Danh sách đội bóng
+```
+╔═══╦══════════════════════════════╦═════╦═════╦═════╦════════════════╗
+║ # ║ Đội bóng                     ║ ATK ║ DEF ║ MID ║    Overall     ║
+╠═══╬══════════════════════════════╬═════╬═════╬═════╬════════════════╣
+║  1║ Manchester City              ║   92║   85║   91║          89.3  ║
+║  2║ Arsenal                      ║   86║   83║   87║          85.2  ║
+╚═══╩══════════════════════════════╩═════╩═════╩═════╩════════════════╝
+```
+
+### Bảng xếp hạng sau cả mùa
+```
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                      🏆  BẢNG XẾP HẠNG PREMIER LEAGUE                      ║
+╠═══╦══════════════════════════╦═══╦═══╦═══╦═══╦═════╦═════╦════╦════════════╣
+║ # ║ Đội bóng                 ║ P ║ W ║ D ║ L ║  F  ║  A  ║ GD ║    PTS     ║
+╠═══╬══════════════════════════╬═══╬═══╬═══╬═══╬═════╬═════╬════╬════════════╣
+║  1 ║ Manchester City          ║ 38║ 22║  8║  8║   67║   31║  36║        74  ║
+║  2 ║ Arsenal                  ║ 38║ 21║  9║  8║   63║   29║  34║        72  ║
+╚═══╩══════════════════════════╩═══╩═══╩═══╩═══╩═════╩═════╩════╩════════════╝
+```
+
+---
+
+## 🗺️ Lộ trình Phát triển
+
+| Tuần | Giai đoạn | Trạng thái |
+|------|-----------|------------|
+| **1** | Foundation & Data — OOP entities + DataSeeder JSON | ✅ Hoàn thành |
+| **2** | Scheduling Core — Round-Robin 380 trận | ✅ Hoàn thành |
+| **3** | Simulation Engine — Strategy + Observer Pattern | ✅ Hoàn thành |
+| **4** | Optimization — Tie-breaking + CLI integration | ✅ Hoàn thành |
+
+---
+
+## 📁 Cấu trúc Project
+
+```
+Football-Tournement-Simulation-Engine/
+├── src/main/java/com/football/
+│   ├── Main.java                    ← CLI Entry Point
+│   ├── model/                       ← Domain Entities
+│   │   ├── Player.java, Team.java, Match.java
+│   │   ├── Tournament.java, MatchEvent.java
+│   │   └── Position.java, EventType.java (enums)
+│   ├── tactic/                      ← Strategy Pattern
+│   │   ├── Tactic.java (interface)
+│   │   ├── BalancedTactic.java
+│   │   └── AllOutAttackTactic.java
+│   ├── observer/                    ← Observer Pattern
+│   │   ├── MatchObserver.java (interface)
+│   │   └── LeagueTable.java
+│   ├── engine/                      ← Core Algorithms
+│   │   ├── FixtureGenerator.java    (Round-Robin)
+│   │   └── MatchSimulationEngine.java
+│   └── data/
+│       └── DataSeeder.java          ← JSON → Objects
+├── src/main/resources/
+│   └── teams.json                   ← 20 Premier League teams
+├── docs/
+│   ├── backend-specs.md
+│   ├── system-design.md
+│   ├── frontend-ui-specs.md
+│   └── ai-execution-plan.md
+├── pom.xml                          ← Maven build (Java 23)
+├── execusionplan.md                 ← Project specification
+└── README.md
+```
+
+---
+
+## 📚 Tài liệu Tham khảo
+
+- [Backend Specs](docs/backend-specs.md) — DataSeeder, Round-Robin pseudo-code, công thức xác suất
+- [System Design](docs/system-design.md) — Class diagram, Strategy & Observer Pattern analysis
+- [Frontend UI Specs](docs/frontend-ui-specs.md) — REST API endpoints, Java Swing layout
+- [AI Execution Plan](docs/ai-execution-plan.md) — Code-gen prompts + edge cases
+
+---
+
+## 🔬 Design Patterns Được Áp Dụng
+
+### Strategy Pattern — Chiến thuật linh hoạt
+```java
+// Tự động ở phút 70 khi thua bàn:
+homeTeam.setCurrentTactic(new AllOutAttackTactic()); // ATK×1.35, DEF×0.80
+```
+
+### Observer Pattern — Bảng xếp hạng real-time
+```java
+// Match (Subject) → LeagueTable (Observer)
+match.addObserver(leagueTable);
+match.finishMatch(); // → leagueTable.onMatchFinished() tự động cập nhật điểm
+```
